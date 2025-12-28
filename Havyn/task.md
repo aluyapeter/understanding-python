@@ -91,3 +91,26 @@ function credit: 1. Check if amount is positive - If not: return error
     6. Mark idempotency_key as used
 
     7. Return new balance
+
+---
+
+def credit(self, user_id, amount, idempotency_key): # Step 1: Check if amount is positive # if amount <= 0: # return error or raise exception
+
+    # Step 2: Check if we already did this operation
+    # if idempotency_key in self.txns:
+    #     return current balance (don't credit again!)
+
+    # Step 3: Get current balance
+    # current_balance = ???
+
+    # Step 4: Calculate new balance
+    # new_balance = ???
+
+    # Step 5: Save new balance
+    # self.wallets[user_id] = ???
+
+    # Step 6: Mark operation as done
+    # self.txns[idempotency_key] = ???
+
+    # Step 7: Return new balance
+    # return ???
