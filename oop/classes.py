@@ -43,3 +43,17 @@ p2 = Person1("Tobias", 25)
 
 print(p1.name, p1.age)
 print(p2.name, p2.age)
+
+# The self parameter is a reference to the current instance of the class.
+
+# It is used to access properties and methods that belong to the class.
+
+class House:
+  def __init__(self, owner, age):
+    self.owner = owner
+    self.age = age
+  def greet(self):
+    print(f"Hello, the owner of this property is Mr {self.owner}")
+
+# h1 = House("Aluya", 55)
+House("James", 55).greet()
