@@ -30,3 +30,6 @@ class Palindrome:
                 l += 1
                 r -= 1
         return True
+    
+#time complexity is O(n)
+#space complexity is O(1)
