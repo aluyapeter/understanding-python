@@ -19,3 +19,25 @@ nums = [2, 4, 7, 3, 6]
 target = 10
 
 print(two_sum(nums, target))
+
+# Two sum II
+# Input: nums = [2, 7, 11, 15], target = 9 (Note: It is sorted).Constraint: You cannot use a Hash Map. A Hash Map uses $O(n)$ memory. I want $O(1)$ memory (no extra data structures).
+
+def two_sum_ii(numbers, target):
+    l = 0
+    r = len(numbers) - 1
+
+    while l < r:
+        sum = numbers[l] + numbers[r]
+
+        if sum > target:
+            r -= 1
+        elif sum < target:
+            l += 1
+        else:
+            return [l, r]
+    return []
+    
+nums = [2, 7, 11, 15]
+target = 9
+print(two_sum_ii(nums, target))
